@@ -78,6 +78,19 @@ def help(topic: str = "general") -> Optional[str]:
         return error(f"Could not find usage or help for '{topic}'.")
     return output.strip("\n") + "\n" # Ensure one newline at the end.
 
+@command
+def interpret(filepath: str) -> Optional[str]:
+    import interpreter
+    try:
+        with open(filepath) as f:
+            source = f.read()
+    except FileNotFoundError:
+        return error(f"The file {filepath} could not be found.")
+    except OSError:
+        return error(f"The file {filepath} could not be opened.")
+    parser = interpreter.Parser(**interpreter.load_grammars())
+    parser.parse(source)
+
 
 if __name__ == "__main__":
     handle_commandline(*sys.argv[1:])
