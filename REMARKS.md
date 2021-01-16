@@ -16,8 +16,10 @@ type Sentence = {
 };
 type Syntax = Element[];
 type Element = Condition[];
-type Condition = ["word", string]
-               | ["type", string];
+type Condition = {
+  type?: str,
+  word?: str
+}
 ```
 ### Types
 ```typescript
