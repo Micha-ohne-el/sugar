@@ -1,0 +1,1 @@
+The usage command provides info on how to use any command.
