@@ -1,0 +1,32 @@
+---
+
+- - name: Exponentiation
+    syntax:
+    - type: num
+    - word: ^
+    - type: num
+
+- - name: Multiplication
+    syntax:
+    - type: num
+    - word: '*'
+      min: 0
+    - type: num
+  - name: Division
+    syntax:
+    - type: num
+    - word: /
+    - type: num
+
+- - name: Addition
+    syntax:
+    - type: num
+      min: 0
+    - word: +
+    - type: num
+  - name: Subtraction
+    syntax:
+    - type: num
+      min: 0
+    - word: '-'
+    - type: num

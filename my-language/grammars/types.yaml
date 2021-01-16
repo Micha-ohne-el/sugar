@@ -1,0 +1,42 @@
+---
+
+- id: any
+  name: Anything
+  subtypes:
+  - id: num
+    name: Number
+    subtypes:
+    - id: int
+      name: Integer
+    - id: rat
+      name: Rational Number
+  - id: sta
+    name: Status
+    subtypes:
+    - id: pos
+      name: Positive Status
+    - id: neg
+      name: Negative Status
+    - id: neu
+      name: Neutral Status
+  - id: str
+    name: String
+    subtypes:
+    - id: ast
+      name: ASCII String
+    - id: dst
+      name: Dynamic String
+    - id: wst
+      name: Wide String
+  - id: cpd
+    name: Compound
+    subtypes:
+  - id: cod
+    name: code
+    subtypes:
+    - id: fun
+      name: Function
+    - id: cmd
+      name: Command
+- id: not
+  name: Nothing
