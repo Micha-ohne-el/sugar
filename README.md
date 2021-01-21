@@ -1,6 +1,31 @@
 # Sugar
 A sweet little programming language.
 
+## Introduction
+I got bitten by the language bug over a year ago,
+and ever since I've had these ideas floating around in my head.
+This project is the manifestation of these ideas,
+put together into a language that is hopefully nice to use
+and that hopefully brings some neat ideas to the table.
+
+## Running the program
+* Navigate to the project root (`cd ~/Documents/sugar` for example).
+* Run `pip install -r requirements.txt` to install all dependencies in one go.
+* Run `python sugar [args...]`.  
+  See the docs for a proper explanation on the commandline arguments.
+I'm developing this on Linux, but since it's written in Python,
+it should work just as well on Windows and MacOS.
+If not, open an Issue or text me or whatever and I'll take care of it,
+there is no reason this can't be cross-platform.
+
+## Contributing
+Right now this project is in its babyshoes,
+so I doubt that I would accept any big PRs.
+That being said, any ideas and minor contributions are very much appreciated!
+
+You can just submit an Issue or a Pull Request on GitHub if you want to do that,
+I'll reply as soon as possible!
+
 ## Project structure
 Many subdirectories have their own `README.md` files that better explains them.
 
@@ -35,19 +60,6 @@ Many subdirectories have their own `README.md` files that better explains them.
     `pip install -r requirements.txt`.
     These will not be required when this program gets released,
     they are just required for building and developing Sugar.
-
-## Running the program
-* Navigate to the project root (`cd ~/Documents/sugar` for example).
-* Run `pip install -r requirements.txt` to install all dependencies in one go.
-* Run `python sugar [args...]`.  
-  See the docs for a proper explanation on the commandline arguments.
-
-## Contributing
-Right now this project is in its babyshoes,
-so doubt that I would accept any big PRs.
-That being said, any ideas and contributions are very much appreciated!
-
-You can just submit an Issue or a Pull Request on GitHub if you want to do that.
 
 
 ## :)
