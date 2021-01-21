@@ -2,7 +2,7 @@
 A programming language. I haven't decided on more details yet...
 
 ## Project structure
-Unimportant things are omitted (such as `.vscode`).
+Unimportant things are omitted (such as `.vscode/`).
 * `sugar/` – Project root.
   * `docs/` – HTML documentation for use on GitHub Pages.
     This is in contrast with `sugar/help/` which contains shorter plain-text
@@ -17,7 +17,7 @@ Unimportant things are omitted (such as `.vscode`).
     * `help/` – Help texts that are built into the program (`sugar help`).
       This is in contrast to `../docs/` which contains HTML docs.
       The docs are more thorough but not included in the program.
-  * `tests/` – For the time beint these are source files to test the parser.
+  * `tests/` – For the time being these are source files to test the parser.
     Eventually this will house proper unit tests.
   * `REMARKS.md` – Reasoning for certain design decisions,
     more thorough comments that would ruin the flow of source code,
