@@ -30,3 +30,28 @@
       min: 0
     - word: '-'
     - type: num
+
+- - name: Variable-Value-Assignment
+    syntax:
+    - literal: false
+      constant: false
+    - word: :=
+    - type: any
+  - name: Constant-Value-Assignment
+    syntax:
+    - literal: false
+      declared: false
+    - word: ::=
+    - type: any
+  - name: Variable-Reference-Assignment
+    syntax:
+    - literal: false
+      constant: false
+    - word: :==
+    - type: any
+  - name: Constant-Reference-Assignment
+    syntax:
+    - literal: false
+      declared: false
+    - word: ::==
+    - type: any
