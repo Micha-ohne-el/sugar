@@ -1,0 +1,9 @@
+{
+  // If you're using PyLance:
+  "python.autoComplete.extraPaths": [
+    "./sugar"
+  ],
+  "python.analysis.extraPaths": [
+    "./sugar"
+  ]
+}
