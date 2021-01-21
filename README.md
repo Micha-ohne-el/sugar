@@ -2,7 +2,8 @@
 A programming language. I haven't decided on more details yet...
 
 ## Project structure
-Unimportant things are omitted (such as `.vscode/`).
+Many subdirectories have their own `README.md` files that better explains them.
+
 * `sugar/` – Project root.
   * `docs/` – HTML documentation for use on GitHub Pages.
     This is in contrast with `sugar/help/` which contains shorter plain-text
@@ -12,11 +13,19 @@ Unimportant things are omitted (such as `.vscode/`).
     This is mainly just so I don't forget them,
     they are not at all guaranteed to get implemented.
   * `sugar/` – Root of the _program_ `sugar` (compiler, help texts, etc.).
+    This is where the real programming happens.
     * `grammars/` – Grammar definitions for the entire language.
       This is what controls the syntax of Sugar.
+      * `*.jsonc` – Left over files from when I was using JSON to define this.
+        The code is still implemented but will probably removed soon,
+        along with these files.
     * `help/` – Help texts that are built into the program (`sugar help`).
-      This is in contrast to `../docs/` which contains HTML docs.
+      This is in contrast to `../docs/` which contains HTML documentation.
       The docs are more thorough but not included in the program.
+      * `general.txt` – The help file used when no topic is given
+        (`sugar help` instead of `sugar help compile` for example).
+      * `*.txt` – All other help files.
+        These are dynamically read by the `help` command.
   * `tests/` – For the time being these are source files to test the parser.
     Eventually this will house proper unit tests.
   * `REMARKS.md` – Reasoning for certain design decisions,
@@ -29,6 +38,7 @@ Unimportant things are omitted (such as `.vscode/`).
 
 ## Running the program
 * Navigate to the project root (`cd ~/Documents/sugar` for example).
+* Run `pip install -r requirements.txt` to install all dependencies in one go.
 * Run `python sugar [args...]`.  
   See the docs for a proper explanation on the commandline arguments.
 
