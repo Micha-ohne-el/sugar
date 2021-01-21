@@ -32,24 +32,28 @@
     - type: num
 
 - - name: Variable-Value-Assignment
+    meta: true
     syntax:
     - literal: false
       constant: false
     - word: :=
     - type: any
   - name: Constant-Value-Assignment
+    meta: true
     syntax:
     - literal: false
       declared: false
     - word: ::=
     - type: any
   - name: Variable-Reference-Assignment
+    meta: true
     syntax:
     - literal: false
       constant: false
     - word: :==
     - type: any
   - name: Constant-Reference-Assignment
+    meta: true
     syntax:
     - literal: false
       declared: false

@@ -40,6 +40,7 @@ interface NormalElement {
   max?: number;       // maximum amount this element can appear; default = 1.
 }
 interface MetaElement extends NormalElement {
+  meta: true;         // needs to be set to be meta operator.
   literal?: boolean;  // whether the operand is literal.
   constant?: boolean; // whether the operand is constant.
   declared?: boolean; // whether the operand is an already declared name.
