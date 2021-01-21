@@ -13,6 +13,7 @@ and that hopefully brings some neat ideas to the table.
 * Run `pip install -r requirements.txt` to install all dependencies in one go.
 * Run `python sugar [args...]`.  
   See the docs for a proper explanation on the commandline arguments.
+
 I'm developing this on Linux, but since it's written in Python,
 it should work just as well on Windows and MacOS.
 If not, open an Issue or text me or whatever and I'll take care of it,
