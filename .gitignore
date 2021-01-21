@@ -2,7 +2,5 @@
 *cache*
 # Ignore backup files
 *.bak
-# Ignore all hidden files and folders...
-.*
 # Except for this very file
 !.gitignore
