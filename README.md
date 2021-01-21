@@ -1,5 +1,5 @@
 # Sugar
-A programming language. I haven't decided on more details yet...
+A sweet little programming language.
 
 ## Project structure
 Many subdirectories have their own `README.md` files that better explains them.
