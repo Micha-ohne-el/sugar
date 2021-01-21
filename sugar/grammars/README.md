@@ -24,6 +24,28 @@ and has the side-effect of actually assigning a value to a name.
 `x := y` and `1 := 1` are very different (the latter being invalid),
 but a normal operator would see no difference.
 
+### A TypeScript representation of the syntax of `operators.yaml`
+```typescript
+type OperatorsGrammar = Group[];
+type Group = Operator[];
+interface Operator {
+  /* id: string; */   // id is inferred from name.
+  name: string;       // Operator name, such as "Addition".
+  syntax: NormalElement[] | MetaElement[];
+}
+interface NormalElement {
+  type?: string;      // type of value, such as "str" or "int".
+  word?: string;      // some literal text, such as "+" or "delete".
+  min?: number;       // minimum amount this element must appear; default = 1.
+  max?: number;       // maximum amount this element can appear; default = 1.
+}
+interface MetaElement extends NormalElement {
+  literal?: boolean;  // whether the value is literal.
+  variable?: boolean; // whether the value is variable.
+  constant?: boolean; // whether the value is constant.
+}
+```
+
 ## Types
 #### `types.yaml`
 Types are the way to insure values and names are compatible with one another.
@@ -32,3 +54,13 @@ They follow a strict hierarchy layed out in this file.
 Type IDs are always three lowercase letters,
 which are equal to the first three letters of the type's full name,
 except where ambiguous (Compound `com` and Command `com` for example.)
+
+### A TypeScript representation of the syntax of `types.yaml`
+```typescript
+type TypesGrammar = Type[];
+interface Type {
+  id: string;         // Three-letter name used in Sugar code.
+  name: string;       // Full name.
+  subtypes?: Type[];
+}
+```
